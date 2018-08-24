@@ -26,3 +26,17 @@ add_executable(benchmark_publisher
     )
 
 target_link_libraries(benchmark_publisher ${catkin_LIBRARIES})
+
+#############
+## Install ##
+#############
+
+install(TARGETS benchmark_publisher
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+install(DIRECTORY launch config
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)

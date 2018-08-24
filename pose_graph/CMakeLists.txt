@@ -45,3 +45,14 @@ add_executable(pose_graph
 
 target_link_libraries(pose_graph ${catkin_LIBRARIES}  ${OpenCV_LIBS} ${CERES_LIBRARIES}) 
 message("catkin_lib  ${catkin_LIBRARIES}")
+
+
+#############
+## Install ##
+#############
+
+install(TARGETS pose_graph
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
